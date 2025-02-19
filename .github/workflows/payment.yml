@@ -5,12 +5,12 @@ jobs:
   DEV:
     runs-on: self-hosted
     steps:
-    - name: Checkout dispatch Helm repo
+    - name: Checkout payment Helm repo
       uses: actions/checkout@v4
       with:
         repository: azawsdevops/aks-roboshop-helm
     - run: |
-        bash argocd.sh dispatch dev
+        bash argocd.sh payment dev
         echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   QAS:
     needs: DEV
