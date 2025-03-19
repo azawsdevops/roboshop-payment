@@ -4,3 +4,4 @@ WORKDIR         /home/python
 COPY            payment.ini payment.py rabbitmq.py requirements.txt ./
 RUN             pip install -r requirements.txt
 ENTRYPOINT      ["uwsgi", "--ini", "payment.ini"]
+
