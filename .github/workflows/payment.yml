@@ -5,8 +5,8 @@ on:
     branches:
     - main
     with:
-    secrets:
-      VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
+      secrets:
+        VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
       
 jobs:
   ci:
